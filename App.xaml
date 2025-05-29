@@ -1,0 +1,30 @@
+<Application x:Class="ByensIT_Optimizer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Global Fonts -->
+        <FontFamily x:Key="PrimaryFont">Segoe UI</FontFamily>
+        
+        <!-- Global Colors -->
+        <SolidColorBrush x:Key="PrimaryAccent" Color="#238636"/>
+        <SolidColorBrush x:Key="Background" Color="#0D1117"/>
+        <SolidColorBrush x:Key="Surface" Color="#161B22"/>
+        
+        <!-- Global Styles -->
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        </Style>
+    </Application.Resources>
+</Application> 

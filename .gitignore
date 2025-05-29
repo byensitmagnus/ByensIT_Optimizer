@@ -1,0 +1,86 @@
+# Visual Studio / .NET Build Artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.tmp
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+
+# Package Files
+*.nupkg
+*.snupkg
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Logs
+Logs/*.log
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# PowerShell execution policy cache
+*.ps1xml
+
+# Compiled PowerShell scripts
+*.ps1c
+
+# System files
+.DS_Store
+*~
+
+# IDE files
+*.swp
+*.swo
+*~
+
+# NuGet packages directory
+packages/
+
+# Backup files
+*.bak
+*.backup
+
+# Test results
+TestResults/
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Local development settings
+appsettings.local.json 

@@ -1,0 +1,33 @@
+{
+  "modules": {
+    "safeRepair": {
+      "enabled": true,
+      "description": "System repair med DISM, SFC og temp cleanup"
+    },
+    "debloat": {
+      "enabled": true,
+      "description": "Fjern bloatware og UWP apps"
+    },
+    "privacy": {
+      "enabled": true,
+      "description": "Deaktiver telemetri og forbedre privatliv"
+    },
+    "gamingTweaks": {
+      "enabled": true,
+      "description": "Gaming optimering inkl. HAGS og driver updates"
+    },
+    "performanceTweaks": {
+      "enabled": true,
+      "description": "Ultimate Performance plan og systemoptimering"
+    }
+  },
+  "settings": {
+    "createRestorePoint": true,
+    "enableLogging": true,
+    "autoUpdate": true,
+    "showProgressBar": true,
+    "runAsAdmin": true
+  },
+  "version": "1.0.0",
+  "lastUpdated": "2025-05-29"
+} 

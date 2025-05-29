@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "releaseDate": "2025-05-29",
+  "changelog": [
+    "Initial release af ByensIT Optimizer",
+    "Safe repair funktionalitet",
+    "Debloat og privacy tweaks",
+    "Gaming optimering med HAGS",
+    "WPF GUI med modul toggles"
+  ],
+  "downloadUrl": "https://github.com/Byens-IT/optimizer/releases/latest/download/ByensIT-Optimizer.exe",
+  "updateUrl": "https://raw.githubusercontent.com/Byens-IT/optimizer/main/version.json",
+  "minWindowsVersion": "10.0.19041",
+  "requiredRights": "Administrator"
+} 

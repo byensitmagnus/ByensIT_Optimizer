@@ -1,0 +1,26 @@
+{
+  "profiles": {
+    "ByensIT_Optimizer": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BYENSIT_LOG_LEVEL": "Debug"
+      }
+    },
+    "ByensIT_Optimizer_Production": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "BYENSIT_LOG_LEVEL": "Information"
+      }
+    },
+    "ByensIT_Optimizer_Gaming": {
+      "commandName": "Project",
+      "commandLineArgs": "--gaming-mode",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "BYENSIT_LOG_LEVEL": "Debug"
+      }
+    }
+  }
+} 

@@ -1,0 +1,191 @@
+<Window x:Class="ByensIT_Optimizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ByensIT Complete PC Suite v2.0" 
+        Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#0D1117">
+    
+    <Window.Resources>
+        <!-- Danske farver og styles -->
+        <SolidColorBrush x:Key="DanishRedBrush" Color="#C60C30"/>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#238636"/>
+        <SolidColorBrush x:Key="SurfaceBrush" Color="#161B22"/>
+        <SolidColorBrush x:Key="TextPrimaryBrush" Color="#F0F6FC"/>
+        <SolidColorBrush x:Key="TextSecondaryBrush" Color="#8B949E"/>
+        
+        <Style x:Key="DanishButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="16,8"/>
+            <Setter Property="Margin" Value="8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="6"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#2EA043"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Header med ByensIT logo og titel -->
+        <Border Grid.Row="0" Background="{StaticResource SurfaceBrush}" Padding="20">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="🇩🇰" FontSize="32" VerticalAlignment="Center" Margin="0,0,16,0"/>
+                <StackPanel>
+                    <TextBlock Text="ByensIT Complete PC Suite" 
+                               FontSize="24" 
+                               FontWeight="Bold" 
+                               Foreground="{StaticResource TextPrimaryBrush}"/>
+                    <TextBlock Text="Danmarks bedste PC optimizer og gaming performance suite" 
+                               FontSize="14" 
+                               Foreground="{StaticResource TextSecondaryBrush}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20,0,0,0">
+                    <TextBlock Text="v2.0.0" 
+                               Foreground="{StaticResource PrimaryBrush}" 
+                               FontWeight="Bold" 
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        
+        <!-- Main Content -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Venstre panel - System Optimering -->
+            <Border Grid.Column="0" Background="{StaticResource SurfaceBrush}" 
+                    CornerRadius="8" Margin="0,0,10,0" Padding="20">
+                <StackPanel>
+                    <TextBlock Text="🚀 System Optimering" 
+                               FontSize="20" 
+                               FontWeight="Bold" 
+                               Foreground="{StaticResource TextPrimaryBrush}" 
+                               Margin="0,0,0,20"/>
+                    
+                    <Button Content="🧹 Rens System (Hurtig)" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="QuickClean_Click"/>
+                    
+                    <Button Content="⚡ Performance Boost" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="PerformanceBoost_Click"/>
+                    
+                    <Button Content="🛡️ Sikkerhedsscan" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="SecurityScan_Click"/>
+                    
+                    <Button Content="🔧 Windows Tweaks" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="WindowsTweaks_Click"/>
+                    
+                    <!-- VERIFICATION BUTTONS - NEW! -->
+                    <Separator Margin="0,15,0,15" Background="#FF333333"/>
+                    
+                    <TextBlock Text="📋 VERIFICERING - Er tweaks RIGTIGT aktiverede?" 
+                               FontSize="14" 
+                               FontWeight="Bold" 
+                               Foreground="Yellow" 
+                               Margin="0,0,0,10"/>
+                    
+                    <Button Content="🔍 TJEK SYSTEM STATUS" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Background="#FF1744"
+                            Click="VerifySystemStatus_Click"/>
+                    
+                    <Button Content="📋 VIS DETALJERET LOG" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Background="#3F51B5"
+                            Click="ShowDetailedLog_Click"/>
+                    
+                    <TextBlock Text="💡 Tips: Kør system optimering ugentligt for bedste performance" 
+                               FontSize="12" 
+                               Foreground="{StaticResource TextSecondaryBrush}" 
+                               TextWrapping="Wrap" 
+                               Margin="8,20,8,0"/>
+                </StackPanel>
+            </Border>
+            
+            <!-- Højre panel - Gaming & Performance -->
+            <Border Grid.Column="1" Background="{StaticResource SurfaceBrush}" 
+                    CornerRadius="8" Margin="10,0,0,0" Padding="20">
+                <StackPanel>
+                    <TextBlock Text="🎮 Gaming Performance" 
+                               FontSize="20" 
+                               FontWeight="Bold" 
+                               Foreground="{StaticResource TextPrimaryBrush}" 
+                               Margin="0,0,0,20"/>
+                    
+                    <Button Content="🚀 Boost FPS Nu!" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Background="{StaticResource DanishRedBrush}"
+                            Click="BoostFPS_Click"/>
+                    
+                    <Button Content="🎯 Gaming Mode" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="GamingMode_Click"/>
+                    
+                    <Button Content="⚙️ GPU Optimering" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="GPUOptimization_Click"/>
+                    
+                    <Button Content="📊 Performance Monitor" 
+                            Style="{StaticResource DanishButtonStyle}"
+                            Click="PerformanceMonitor_Click"/>
+                    
+                    <TextBlock Text="🏆 ByensIT Gaming Suite kan øge din FPS med op til 30%!" 
+                               FontSize="12" 
+                               Foreground="{StaticResource PrimaryBrush}" 
+                               TextWrapping="Wrap" 
+                               FontWeight="SemiBold"
+                               Margin="8,20,8,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        
+        <!-- Footer -->
+        <Border Grid.Row="2" Background="{StaticResource SurfaceBrush}" Padding="20,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0" 
+                           Text="© 2024 ByensIT ApS | Danmarks førende PC optimization suite" 
+                           Foreground="{StaticResource TextSecondaryBrush}" 
+                           VerticalAlignment="Center"/>
+                
+                <TextBlock Grid.Column="1" 
+                           Text=".NET 6.0 SDK ✅ | Status: Klar til optimering!" 
+                           Foreground="{StaticResource PrimaryBrush}" 
+                           FontWeight="SemiBold"
+                           VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window> 
